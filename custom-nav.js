@@ -1,8 +1,8 @@
 // Multi-Level Full Screen Menu Script v1.0
 // Date: Jan 13th, 17'
-// By Dynamic Drive: http://www.dynamicdrive.com
-
+// By Dynamic Drive: http://www.dynamicdrive.com/
 // classLists Pollyfill: https://github.com/remy/polyfills/blob/6e87470526c496c0fc53fa87ed5a825eff61f1f3/classList.js
+// Edited By: https://kepnis.blogspot.com/
 
 (function () {
 
@@ -77,7 +77,7 @@ defineElementGetter(Element.prototype, 'classList', function () {
 
 // Multi-Level Full Screen Menu code:
 
-var ddfullscreenmenu = (function(){
+var cssmenu = (function(){
 
 	var menuref,
 			ulwrapper,
@@ -131,13 +131,13 @@ var ddfullscreenmenu = (function(){
 		},
 
 		init:function(){
-			menuref = document.getElementById('ddfullscreenmenu')
+			menuref = document.getElementById('cssmenu')
 			ulwrapper = document.getElementById('ulwrapper')
 			mainul = document.getElementById('fullscreenmenu-ul')
 			closex = document.getElementById('closex')
 
 			closex.addEventListener('click', function(e){ // action when user clicks on "close" button
-				ddfullscreenmenu.togglemenu('close')
+				cssmenu.togglemenu('close')
 				e.preventDefault()			
 			}, false)
 
@@ -174,7 +174,7 @@ var ddfullscreenmenu = (function(){
 			ulwrapper.addEventListener('click', function(){ // close menu when a menu link is clicked on
 				clearTimeout(closetimer)
 				closetimer = setTimeout(function(){
-					ddfullscreenmenu.togglemenu('close')
+					cssmenu.togglemenu('close')
 				}, 100)
 			}, false)
 		}
