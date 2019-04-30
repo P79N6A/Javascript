@@ -77,7 +77,7 @@ defineElementGetter(Element.prototype, 'classList', function () {
 
 // Multi-Level Full Screen Menu code:
 
-var ddfullscreenmenu = (function(){
+var nb-nav = (function(){
 
 	var menuref,
 			ulwrapper,
@@ -131,13 +131,13 @@ var ddfullscreenmenu = (function(){
 		},
 
 		init:function(){
-			menuref = document.getElementById('ddfullscreenmenu')
+			menuref = document.getElementById('nb-nav')
 			ulwrapper = document.getElementById('ulwrapper')
 			mainul = document.getElementById('fullscreenmenu-ul')
 			closex = document.getElementById('closex')
 
 			closex.addEventListener('click', function(e){ // action when user clicks on "close" button
-				ddfullscreenmenu.togglemenu('close')
+				nb-nav.togglemenu('close')
 				e.preventDefault()			
 			}, false)
 
@@ -174,7 +174,7 @@ var ddfullscreenmenu = (function(){
 			ulwrapper.addEventListener('click', function(){ // close menu when a menu link is clicked on
 				clearTimeout(closetimer)
 				closetimer = setTimeout(function(){
-					ddfullscreenmenu.togglemenu('close')
+					nb-nav.togglemenu('close')
 				}, 100)
 			}, false)
 		}
